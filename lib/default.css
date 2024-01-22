@@ -1,0 +1,57 @@
+BODY { FONT-SIZE: 9pt; COLOR: #666666;  line-height:150%; FONT-FAMILY: ±¼¸²,µ¸À½ }
+TD { FONT-SIZE: 9pt; COLOR: #666666; line-height:150%; FONT-FAMILY: ±¼¸²,µ¸À½ }
+DIV { FONT-SIZE: 9pt; COLOR: #666666; FONT-FAMILY: ±¼¸²,µ¸À½ }
+FORM { FONT-SIZE: 9pt; COLOR: #666666; FONT-FAMILY: ±¼¸²,µ¸À½ }
+TEXTAREA { FONT-SIZE: 9pt; COLOR: #666666; FONT-FAMILY: ±¼¸²,µ¸À½ }
+CENTER { FONT-SIZE: 9pt; COLOR: #666666; FONT-FAMILY: ±¼¸²,µ¸À½ }
+OPTION { FONT-SIZE: 9pt; COLOR: #666666; FONT-FAMILY: ±¼¸²,µ¸À½ }
+PRE { FONT-SIZE: 9pt; COLOR: #666666; FONT-FAMILY: ±¼¸²,µ¸À½ }
+SELECT { FONT-SIZE: 9pt; COLOR: navy; FONT-FAMILY: ±¼¸²,µ¸À½ }
+P { FONT-SIZE: 9pt; FONT-FAMILY: ±¼¸²,µ¸À½ }
+BLOCKQUOTE { FONT-SIZE: 9pt; FONT-FAMILY: ±¼¸²,µ¸À½ }
+BR { FONT-SIZE: 9pt; FONT-FAMILY: ±¼¸²,µ¸À½ }
+
+A:link { FONT-SIZE: 9pt; COLOR:#555555; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: none }
+A:visited {FONT-SIZE: 9pt; COLOR:#555555; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: none }
+A:hover {FONT-SIZE: 9pt; COLOR:#0000ff; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: underline}
+A:active {FONT-SIZE: 9pt; COLOR:#ff0000; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: underline}
+
+
+A.news:link	{     FONT-SIZE: 9pt; COLOR:#515151; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: none }
+A.news:visited	{ FONT-SIZE: 9pt; COLOR:#515151; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: none }
+A.news:hover	{     FONT-SIZE: 9pt; COLOR:#515151; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: underline}
+A.news:active	{     FONT-SIZE: 9pt; COLOR:#515151; FONT-FAMILY: ±¼¸²,µ¸À½; TEXT-DECORATION: underline}
+
+
+A.cate:link { FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #888888; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em; TEXT-DECORATION: none }
+A.cate:visited { FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #888888; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em; TEXT-DECORATION: none}
+A.cate:hover { FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #888888; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em; TEXT-DECORATION: underline}
+A.cate:active { FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #888888; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em; TEXT-DECORATION: underline}
+
+A.mini:link	{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #595959; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: -1px; TEXT-DECORATION: none }
+A.mini:visited	{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #595959; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING:-1px; TEXT-DECORATION: none }
+A.mini:hover	{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #0000cc; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0px; TEXT-DECORATION: underline}
+A.mini:active	{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #0000cc; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0px; TEXT-DECORATION: underline}
+
+
+
+.he-basic { FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #666666; PADDING-TOP: 3px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em;}
+.mtext01{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #666666; PADDING-TOP: 3px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em; }
+.mtext02{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #999999; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em;}
+.mtext03{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #888888; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: -0.1em;}
+.mtext04{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #3b73b9; PADDING-TOP: 5px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: -0.1em;}
+.mtext05{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #888888; PADDING-TOP: 0px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em;}
+.mtext06{ FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #3b73b9; PADDING-TOP: 2px; FONT-FAMILY: "µ¸¿ò"; LETTER-SPACING: 0em;}
+.h_130 {line-height:130%;}
+
+
+.sub_title01  {font-family:"±¼¸²";color:#5d8bc5;font-size:12px;font-weight:bold;}
+.sub_title02  {font-family:"±¼¸²";color:#3e6da7;font-size:13px;PADDING-TOP: 1px;font-weight:bold;}
+.sub_title03  {font-family:"±¼¸²";color:#333333;font-size:13px;PADDING-TOP: 0px;font-weight:bold;}
+
+
+
+.forms{font-family:"µ¸¿ò";font-size: 12px;border-right: #cacaca 1px solid;border-top: #cacaca 1px solid;border-left: #cacaca 1px solid;
+	     border-bottom: #cacaca 1px solid;scrollbar-3dlight-color:C7C7C7;scrollbar-arrow-color:797979;scrollbar-base-color:ffffff;
+	     scrollbar-darkshadow-color:C7C7C7;scrollbar-face-color:ffffff;scrollbar-highlight-color:ffffff;scrollbar-shadow-color:E6E6E6;color:#666666}
+

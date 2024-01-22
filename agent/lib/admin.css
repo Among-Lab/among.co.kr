@@ -1,0 +1,12 @@
+BODY,TD,SELECT,input,DIV,form,TEXTAREA,center,option,pre,blockquote {font-size:9pt; font-family:±¼¸²; color:#000000; line-height:150%}
+A:link    {color:231104;text-decoration:none;}
+A:visited {color:231104;text-decoration:none;}
+A:active  {color:444444;text-decoration:none;}
+A:hover  {color:444444;text-decoration:none;}
+
+.leftmode {  font-family: "±¼¸²"; font-size: 12px; line-height: 18px}
+.blank {	FONT-SIZE: 1pt}
+.inputbox { color:black; background-color:#FFFFFF; border-width:1; border-style:solid; border:1 solid #808080; font-family:±¼¸²; font-size:9pt}
+.forms{font-family:"µ¸¿ò";font-size: 12px;border-right: #DBDBDB 1px solid;border-top: #999999 1px solid;border-left: #999999 1px solid;
+	     border-bottom: #DBDBDB 1px solid;scrollbar-3dlight-color:C7C7C7;scrollbar-arrow-color:797979;scrollbar-base-color:ffffff;
+	     scrollbar-darkshadow-color:C7C7C7;scrollbar-face-color:ffffff;scrollbar-highlight-color:ffffff;scrollbar-shadow-color:E6E6E6;color:#666666}

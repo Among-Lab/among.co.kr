@@ -1,0 +1,142 @@
+<?session_start()?>
+<?include "../popup_h.php";?>
+<?
+
+include "../../lib/connect.php";
+
+$dbCon = new dbConn();
+
+if($HTTP_POST_FILES[imgfile]) {
+		$imgfile = $HTTP_POST_FILES[imgfile][tmp_name];
+		$imgfile_name = $HTTP_POST_FILES[imgfile][name];
+		$imgfile_size = $HTTP_POST_FILES[imgfile][size];
+		$imgfile_type = $HTTP_POST_FILES[imgfile][type];
+}
+
+if($HTTP_POST_FILES[upfile]) {
+		$dnfile = $HTTP_POST_FILES[upfile][tmp_name];
+		$dnfile_name = $HTTP_POST_FILES[upfile][name];
+		$dnfile_size = $HTTP_POST_FILES[upfile][size];
+		$dnfile_type = $HTTP_POST_FILES[upfile][type];
+}
+
+if($imgfile_name) {
+	$full_imgname = explode(".",$imgfile_name);
+	$ext = strtolower($full_imgname[sizeof($full_imgname)-1]);
+	if($ext != "jpg" && $ext != "gif" && $ext != "swf") {
+			echo "<script>alert('허용되지 않는 파일 형식입니다.');self.close();</script>";
+			exit;
+	} else {		
+		$image_size_info=@getimagesize($imgfile);
+		if($image_size_info) {
+			$img_w=$image_size_info[0];
+			$img_h=$image_size_info[1];
+			if($img_w > $pwidth) $img_w = $pwidth;
+			if($img_h > $pheight) $img_h = $pheight;
+		} else {
+			$img_w = $pwidth;
+			$img_h = $pheight;
+		}
+	}
+} elseif($imgname) {
+	$full_imgname = explode(".",$imgname);
+	$ext = strtolower($full_imgname[sizeof($full_imgname)-1]);
+	if($ext == "jpg" || $ext == "gif" || $ext == "swf") {
+		$image_size_info=@getimagesize("../".$savedir.$imgname);
+		if($image_size_info) {
+			$img_w=$image_size_info[0];
+			$img_h=$image_size_info[1];
+			if($img_w > $pwidth) $img_w = $pwidth;
+			if($img_h > $pheight) $img_h = $pheight;
+		} else {
+			$img_w = $pwidth;
+			$img_h = $pheight;
+		}
+	}
+	$preview_img = "../".$savedir.$imgname;
+}
+
+//팝업정보 가져오기
+if($number){
+	$result = $dbCon->dbSelect1($db_name,"where uid=$number","subject, imgname, filename, upname, pwidth,pheight,content");
+	$row = mysql_fetch_array($result);
+	$subject = $row[subject];
+	$imgname = $row[imgname];
+	$filename = $row[filename];
+	$upname = $row[upname];
+	$pwidth = $row[pwidth];
+	$pheight = $row[pheight];
+	$content = $row[content];
+	$content = stripslashes($content);
+}
+?>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="../../../lib/default.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../../../lib/loadFlash.js" type="text/javascript"></script>
+<SCRIPT language="JavaScript">
+<!-- 
+function setCookie(name,value,expiredays) 
+{ 
+	var todayDate = new Date(); 
+	todayDate.setDate( todayDate.getDate() + expiredays ); 
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+} 
+
+function closeWin() 
+{ 
+	if(document.forms[0].Notice.checked) 
+	{
+		setCookie("Notice<?=$no?>","done",1); 
+	}	
+	self.close();
+}
+//-->
+</script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="EFEFEF">
+<form>
+	<tr>
+		<td align="center"  valign="top" bgcolor="EFEFEF">
+			<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="EFEFEF">	
+				<tr>
+					<td valign="top">
+					<?if($content) {?> 
+						<?=$content?>
+					<?}?>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+					<?if($ext == "jpg" || $ext == "gif") {?> 
+						<img src="<?=$preview_img?>" border="0" width="<?=$img_w?>" height="<?=$img_h?>"></td>
+					<?} elseif($ext == "swf") {?>						
+						<script>loadFlash('<?=$preview_img?>',<?=$img_w?>,<?=$img_h?>,'popswf');</script>
+					<?}?>
+					</td>
+				</tr>
+				<? if($dnfile_size > 0 && $dnfile) {?>
+				<tr>					
+					<td align="right" valign="bottom" style="padding-right:10;" height="20">[ 첨부파일 ] : <?=$dnfile_name?></td>
+				</tr>
+				<?}?>
+			</table>
+		</td>
+	</tr>
+	<tr height="1" bgcolor="000000"><td></td></tr>
+	<tr>
+		<td height="30" valign="middle" bgcolor="EFEFEF">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>					
+					<td align="right"><input type=CHECKBOX name="Notice" value="" style="border:0" align="absmiddle"> <font color='#666666'>오늘은 그만 띄우기</font> <input type="button" value="닫기" onClick="closeWin()">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</form>
+</table>
+</body>
+</html>
